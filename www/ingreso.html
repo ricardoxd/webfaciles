@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="js/eventos.js"></script>
+        <title>Symasy</title>
+    </head>
+    <body>
+<div id="div_203"  class="escritorio">
+		<br>
+	<header id="header_204"  class="tema">
+		<br>
+	<div id="div_214" >
+		
+		
+		
+		Web Facil Es<br>
+	<img id="img_215"  src="http://i.imgur.com/YNeWAt2.png">
+		
+	</img>
+	<div id="div_218" >
+		
+		
+		
+		Telefono:584245862614<br>
+	</div>
+	<div id="div_219" >
+		SuperSistema
+	</div>
+	</div>
+	</header>
+	<aside id="aside_206" >
+		<br><nav id="nav_151">
+<ul>
+<li><a style="width: 100%;" href="index.html" data-hash="#" >Inicio</a></li>
+<li><a style="width: 100%;" href="ingreso.html" data-hash="#ingreso.php" >Ingreso</a></li>
+
+
+
+</ul>
+
+</nav>
+	</aside>
+	<section id="section_207" >
+		<br><main id="main_211" role="main">
+
+
+<form method="post">
+<label>Cuenta:</label><input name="nombre_cuenta" type="text">
+<label>Clave:</label><input name="clave_cuenta" type="password">
+<input type="submit" value="Entrar">
+</form>
+<script>
+ $( "form" ).submit(function( event ) {
+	event.preventDefault();
+$.post("http://app.ricardoxd.com.ve/datos/ingreso.ajax",
+ { 
+ datos: $(this).serializeArray() },
+ function(data,status){
+ console.log(data);
+ if (status=='success') {
+ 	if(data=="1"){
+ 		console.log('Incorrecto');
+ 		alert("Incorrecto")
+ 	}else {
+ 		if(data=='/')data='index.html';
+ 		window.location = data;
+ 	}
+ 
+ } else{
+
+
+ };
+ });
+
+
+ 
+ });
+</script>
+
+
+
+
+</main>
+	</section>
+	<footer id="footer_208" >
+		 
+		Copyright 2016<br>
+	<a id="a_213"  href="#info">
+		
+		Info
+	<br>
+	</a>
+	<img id="img_220" >
+		
+	</img>
+	</footer>
+	</div>
+
+
+
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
